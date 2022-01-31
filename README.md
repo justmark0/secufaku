@@ -12,6 +12,13 @@ It would be much easier with docker. Just run `docker compose up` (or `docker-co
 Server will start on `http://localhost:8000`, and it will be also available from network. If you want to disable it 
 just modify `Dockerfile` in last row from `0.0.0.0:8000` to `localhost:8000`, and rebuild containers if you started them already `docker compose up --build`
 
+
+## How to log in admin panel
+`localhost:8000/admin` - authentication page
+![Screenshot 2022-01-31 at 21 50 16](https://user-images.githubusercontent.com/54911879/151866284-2060a710-dfb4-45f7-b6ff-be8eaab667a0.jpg)
+You need to enter the container and create user (you can see how to do this on screenshot)
+
+
 ### Also, you can install manually
 ```
 pip install poetry
