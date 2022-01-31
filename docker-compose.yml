@@ -1,0 +1,23 @@
+version: '3'
+services:
+    python:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - 8000:8000
+        environment:
+            - POSTGRES_DATABASE_NAME=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_HOST=db
+            - POSTGRES_PORT=5432
+        depends_on:
+            - db
+
+    db:
+        image: postgres:14
+        environment:
+            POSTGRES_DB: postgres
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
