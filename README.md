@@ -1,17 +1,17 @@
 # secufaku
-This is sample project needed for security course to "connect web service to database".
+This is a sample project needed for a security course to "connect web service to database".
 
-## Why it suits alignment purpose
-It connects to postgresSQL database with basic authentication.
-On this web server you can make gateway with nginx 
-It would be better if you do it in docker network without so web app would not have access to internet, and it would be true gateway. 
-But easier is to send requests to localhost:8000 from nginx.
+## Why this project suits alignment purpose
+It connects to the PostgreSQL database with basic authentication. 
+On this web server, you can make a gateway with Nginx It would be better if you do it in the 
+docker network without so web app would not have internet access, and it would be a true gateway. 
+But easier is to send requests to localhost:8000 from Nginx.
 
 ## How to start web app
-It would be much easier with docker. Just run `docker compose up` (or `docker-compose up` if you have older version).
-Server will start on `http://localhost:8000`, and it will be also available from network. If you want to disable it 
-just modify `Dockerfile` in last row from `0.0.0.0:8000` to `localhost:8000`, and rebuild containers if you started them already `docker compose up --build`
-
+It would be much easier with docker. Just run `docker compose up` (or `docker-compose up` if you have an older version).
+The server will start on `http://localhost:8000`, and it will be also available from the network. If you want to disable it 
+just modify `Dockerfile` in the last row from `0.0.0.0:8000` to `localhost:8000`, and rebuild containers if you started them 
+already `docker compose up --build`.
 
 ## How to log in admin panel
 `localhost:8000/admin` - authentication page
@@ -29,9 +29,9 @@ python src/manage.py runserver 0.0.0.0:8000
 ```
 
 ## Configuration
-You are recommended to modify `docker-compose.yml` environment variables for database and in python block too.
+You are recommended to modify `docker-compose.yml` environment variables for the database and in python block too.
 
 
 ### Notice
-Since I was in hurry and were not in mood to fix static files in docker. Please don't judge me for that 😅.
-You can do this if you want. Just make pull request!
+Since I was in hurry and was not in a mood to fix static files in docker. Please don't judge me for that 😅.
+You can do this if you want. Just make a pull request!
