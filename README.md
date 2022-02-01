@@ -4,7 +4,7 @@ This is a sample project needed for a security course to "connect web service to
 ## Why this project suits alignment purpose
 It connects to the PostgreSQL database with basic authentication. 
 On this web server, you can make a gateway with Nginx It would be better if you do it in the 
-docker network without so web app would not have internet access, and it would be a true gateway. 
+docker network so web app would not have internet access, and it would be a true gateway. 
 But easier is to send requests to localhost:8000 from Nginx.
 
 ## How to start web app
